@@ -4,13 +4,25 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<style>
+  .profile-picture {display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body>
   <div class="wrapper">
 
     <div class="left">
-      <img class="profile-picture" src="images/profile.jpg" width="200"/>
+
+      <div id="profile-pictures">
+        <img class="profile-picture" src="images/profile_social.jpg" width="200">
+        <img class="profile-picture" src="images/profile_LinkedIn.jpg" width="200">
+      </div>
+
       <h1 class="name">Ryan Marsh</h1>
       <h4 class="subtitle">CS Student at UConn<br>
         <a href="mailto:ryan.marsh@uconn.edu">ryan.marsh@uconn.edu</a> </h4>
@@ -18,14 +30,41 @@
 
     <div class="right">
       <p class="bio">
-        UConn 2020 CS Student, Event Coordinator for UConn Gaming Club, interested in all forms of technology
+        Hello!
+        I am a CS student at the University of Connecticut with Java, Python, Scheme, C, C++, and C# experience.
+        I'm also the Event Coordinator for the UConn Gaming Club and work with various esports and tech organizations.
       </p>
-      <ul class="social-links">
-        <li><a href="https://github.com/Rhino48">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/ryan-marsh-253764142/">LinkedIn</a></li>
-        <!-- <li><a href="static/ryan_marsh_resume.pdf">Resume</a></li> -->
-      </ul>
-    </div>
 
+      <ul class="social-links">
+        <li><a href="https://github.com/Rhino48">
+          <img src="images/GitHub.png" style="height: 6vw"></a></li>
+
+        <li><a href="https://www.linkedin.com/in/ryan-marsh-253764142/">
+          <img src="images/LinkedIn.png" style="height: 6vw"></a></li>
+
+        <li><a href="https://twitter.com/Rhino483">
+          <img src="images/Twitter.png" style="height: 6vw"></a></li>
+        <!-- <li><a href="static/MarshRyanResume.pdf">Resume</a></li> -->
+      </ul>
+
+    </div>
   </div>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("profile-picture");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 5000); // Change image every 5 seconds
+    }
+  </script>
+
 </body>
