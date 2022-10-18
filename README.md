@@ -7,4 +7,4 @@ Since the previous host I was using terminated, I decided to create my own websi
 * HTML5 and CSS3 - Coding languages used
 
 ## Authors
-* **Ryan Marsh** - *Project Creator* - [Rhino48](https://github.com/Rhino48)
+* **Ryan Marsh** - *Project Creator* - [RhinoVOD](https://github.com/RhinoVOD)
